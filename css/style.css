@@ -164,8 +164,8 @@ a {
 }
 /* END: about us media queries */
 
-/* START: header media querie */
-@media screen and (max-width: 900px) {
+/* START: header media queries */
+@media screen and (max-width: 1024px) {
   .header__nav {
     background: var(--primary-color);
   }
@@ -174,8 +174,12 @@ a {
     display: none;
   }
 
-  .header__menu-mobile {
+  .header__menu-hamburger {
     display: flex;
+  }
+
+  .header__menu-mobile {
+    display: none;
   }
 }
 
@@ -324,3 +328,8 @@ a {
   }
 }
 /* END: trending media queries */
+
+/* Add or remove this class to handle mobile menu visibility */
+.mobile-menu-show {
+  display: flex;
+}

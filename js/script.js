@@ -7,4 +7,24 @@ AOS.init({
   offset: 100,
 });
 
-// the additional code you saw in the video will not be needed :)
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.header__menu-hamburger');
+  hamburger.addEventListener('click', showMenu);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sideMenuHamburger = document.querySelector(
+    '.header__menu-mobile-hamburger'
+  );
+  sideMenuHamburger.addEventListener('click', hideMenu);
+});
+
+function showMenu() {
+  var mobileMenu = document.querySelector('.header__menu-mobile');
+  mobileMenu.classList.add('mobile-menu-show');
+}
+
+function hideMenu() {
+  var mobileMenu = document.querySelector('.header__menu-mobile');
+  mobileMenu.classList.remove('mobile-menu-show');
+}
